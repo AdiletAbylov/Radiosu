@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		606DF9E4178EEDE2009D3E81 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 606DF9E3178EEDE2009D3E81 /* MainStoryboard.storyboard */; };
+		606DF9E6178F01C4009D3E81 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606DF9E5178F01C4009D3E81 /* MediaPlayer.framework */; };
+		606DF9E8178F0982009D3E81 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606DF9E7178F0982009D3E81 /* AVFoundation.framework */; };
+		6F377808C99742B0A595867F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B226CE7ED7B41E99DF2BFD7 /* libPods.a */; };
+		71F0F14A99BF110007F84C0B /* Radio.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F0F54392AEBAB46C58AFC2 /* Radio.m */; };
 		71F0F18AD9CB5E108162F244 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71F0FD21ED2C739B2EB01E2C /* Default-568h@2x.png */; };
 		71F0F2A5BD910A9B5BCA6301 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71F0FCE74C2409E3BB4722B6 /* InfoPlist.strings */; };
 		71F0F32EF52905D063BC3289 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F0FBBC8C44CDE5009F98EB /* main.m */; };
@@ -15,6 +20,8 @@
 		71F0F57CBE632B17B595BFDB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F0F0EB6B5EFA01C71E864C /* SenTestingKit.framework */; };
 		71F0F5BA29211ABF5BBA5FC8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 71F0F8369BAC39E8821E72AC /* Default.png */; };
 		71F0F65FBAC287FE4073D656 /* GRFXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F0FFFDC30E0B81C43DCBC1 /* GRFXAppDelegate.m */; };
+		71F0F6855E45C03D852F4F6C /* RadioCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F0F1E876697344F2F1B88B /* RadioCell.m */; };
+		71F0F9542D89F590D3B4ABFA /* RadiosListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F0F8C5A502EDA3BC5BABB3 /* RadiosListViewController.m */; };
 		71F0F9F6A878FBCFB01831BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71F0F5EE825F249D0BE47771 /* InfoPlist.strings */; };
 		71F0FB91733578B698576EF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F0F23FCAD01FFE8144CC72 /* CoreGraphics.framework */; };
 		71F0FBED0B6036801A3EEB78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F0FD9560CFD8E2BE69CA87 /* Foundation.framework */; };
@@ -34,23 +41,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F5B936383CC4251827E13D8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		606DF9E3178EEDE2009D3E81 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		606DF9E5178F01C4009D3E81 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		606DF9E7178F0982009D3E81 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6B226CE7ED7B41E99DF2BFD7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F0F047B127093E506B592F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		71F0F08D0E911F75F1CCB40F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		71F0F0EB6B5EFA01C71E864C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		71F0F14EE63DB6FF77DF6909 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		71F0F1E876697344F2F1B88B /* RadioCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioCell.m; sourceTree = "<group>"; };
 		71F0F23FCAD01FFE8144CC72 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		71F0F54392AEBAB46C58AFC2 /* Radio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Radio.m; sourceTree = "<group>"; };
 		71F0F6E6905B61D09D97797E /* RadiosuTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadiosuTests.h; sourceTree = "<group>"; };
+		71F0F78571ACECE4CD068923 /* Radio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Radio.h; sourceTree = "<group>"; };
 		71F0F8369BAC39E8821E72AC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		71F0F8C5A502EDA3BC5BABB3 /* RadiosListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadiosListViewController.m; sourceTree = "<group>"; };
 		71F0FA8553A9CFD2F46EE029 /* GRFXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRFXAppDelegate.h; sourceTree = "<group>"; };
 		71F0FAD22A4C0E482F669032 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		71F0FBBC8C44CDE5009F98EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		71F0FC2D4E9297E01A7F7071 /* Radiosu-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Radiosu-Prefix.pch"; sourceTree = "<group>"; };
 		71F0FC44CFC0890A2A2441F5 /* RadiosuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "RadiosuTests-Info.plist"; sourceTree = "<group>"; };
 		71F0FC773146FC050737A367 /* RadiosuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadiosuTests.m; sourceTree = "<group>"; };
+		71F0FCB29AF5B4DDAE59E50C /* RadioCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioCell.h; sourceTree = "<group>"; };
 		71F0FCDC35458632B55B5FD5 /* Radiosu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Radiosu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F0FD21ED2C739B2EB01E2C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		71F0FD9560CFD8E2BE69CA87 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		71F0FD9778B7F3AB08351F25 /* RadiosuTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadiosuTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71F0FF0081870705AB7B81C0 /* RadiosListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadiosListViewController.h; sourceTree = "<group>"; };
 		71F0FFF9FAF03574D19349E2 /* Radiosu-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "Radiosu-Info.plist"; sourceTree = "<group>"; };
 		71F0FFFDC30E0B81C43DCBC1 /* GRFXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GRFXAppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,9 +78,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				606DF9E8178F0982009D3E81 /* AVFoundation.framework in Frameworks */,
+				606DF9E6178F01C4009D3E81 /* MediaPlayer.framework in Frameworks */,
 				71F0F40AFFD065DC33643516 /* UIKit.framework in Frameworks */,
 				71F0FBED0B6036801A3EEB78 /* Foundation.framework in Frameworks */,
 				71F0FB91733578B698576EF8 /* CoreGraphics.framework in Frameworks */,
+				6F377808C99742B0A595867F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +106,13 @@
 				71F0F27DF45EBDD5C7970B60 /* Supporting Files */,
 				71F0FA8553A9CFD2F46EE029 /* GRFXAppDelegate.h */,
 				71F0FFFDC30E0B81C43DCBC1 /* GRFXAppDelegate.m */,
+				606DF9E3178EEDE2009D3E81 /* MainStoryboard.storyboard */,
+				71F0F8C5A502EDA3BC5BABB3 /* RadiosListViewController.m */,
+				71F0FF0081870705AB7B81C0 /* RadiosListViewController.h */,
+				71F0F1E876697344F2F1B88B /* RadioCell.m */,
+				71F0FCB29AF5B4DDAE59E50C /* RadioCell.h */,
+				71F0F54392AEBAB46C58AFC2 /* Radio.m */,
+				71F0F78571ACECE4CD068923 /* Radio.h */,
 			);
 			path = Radiosu;
 			sourceTree = "<group>";
@@ -92,10 +120,13 @@
 		71F0F134671E6BA9286BACC9 = {
 			isa = PBXGroup;
 			children = (
+				606DF9E7178F0982009D3E81 /* AVFoundation.framework */,
+				606DF9E5178F01C4009D3E81 /* MediaPlayer.framework */,
 				71F0F73D1281CB8209236467 /* Products */,
 				71F0F7641E568FAA075906A0 /* Frameworks */,
 				71F0F02808B7375251E27ACE /* Radiosu */,
 				71F0F7A42B82831168F46FA9 /* RadiosuTests */,
+				2F5B936383CC4251827E13D8 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +169,7 @@
 				71F0FD9560CFD8E2BE69CA87 /* Foundation.framework */,
 				71F0F23FCAD01FFE8144CC72 /* CoreGraphics.framework */,
 				71F0F0EB6B5EFA01C71E864C /* SenTestingKit.framework */,
+				6B226CE7ED7B41E99DF2BFD7 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71F0F8B6EB7CAD8CAA2608D3 /* Build configuration list for PBXNativeTarget "Radiosu" */;
 			buildPhases = (
+				7DC7A80A821241039D7DDAA6 /* Check Pods Manifest.lock */,
 				71F0F0D2B5B676234AA3A2F1 /* Sources */,
 				71F0F47A86D8ECF84179ADDA /* Frameworks */,
 				71F0F1528352ED707C850920 /* Resources */,
+				D188CBFE3D0045159363D053 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,6 +260,7 @@
 				71F0F5BA29211ABF5BBA5FC8 /* Default.png in Resources */,
 				71F0F3975F3E63F7C0A4EC61 /* Default@2x.png in Resources */,
 				71F0F18AD9CB5E108162F244 /* Default-568h@2x.png in Resources */,
+				606DF9E4178EEDE2009D3E81 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +288,34 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		7DC7A80A821241039D7DDAA6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		D188CBFE3D0045159363D053 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -262,6 +325,9 @@
 			files = (
 				71F0F32EF52905D063BC3289 /* main.m in Sources */,
 				71F0F65FBAC287FE4073D656 /* GRFXAppDelegate.m in Sources */,
+				71F0F9542D89F590D3B4ABFA /* RadiosListViewController.m in Sources */,
+				71F0F6855E45C03D852F4F6C /* RadioCell.m in Sources */,
+				71F0F14A99BF110007F84C0B /* Radio.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,11 +371,13 @@
 /* Begin XCBuildConfiguration section */
 		71F0F6A10E4268C1B42BBB17 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F5B936383CC4251827E13D8 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Radiosu/Radiosu-Prefix.pch";
 				INFOPLIST_FILE = "Radiosu/Radiosu-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -381,11 +449,13 @@
 		};
 		71F0FC68E5464A3428DC0DE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F5B936383CC4251827E13D8 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Radiosu/Radiosu-Prefix.pch";
 				INFOPLIST_FILE = "Radiosu/Radiosu-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -425,6 +495,7 @@
 				71F0F8D63E9837017F36F581 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71F0F8B6EB7CAD8CAA2608D3 /* Build configuration list for PBXNativeTarget "Radiosu" */ = {
 			isa = XCConfigurationList;
@@ -433,6 +504,7 @@
 				71F0F6A10E4268C1B42BBB17 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71F0FF2B02A3151C6DA8CAD0 /* Build configuration list for PBXProject "Radiosu" */ = {
 			isa = XCConfigurationList;

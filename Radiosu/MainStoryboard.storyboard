@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ilx-PK-F7i">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller - Радиосу-->
+        <scene sceneID="cM6-iE-gpu">
+            <objects>
+                <tableViewController id="azL-XW-PFD" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="67" sectionHeaderHeight="22" sectionFooterHeight="22" id="Kwv-Gy-yXe">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RadioCell" rowHeight="67" id="xgB-Nl-Fwt" customClass="RadioCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="67"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4VY-Be-e3W">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="F53-DV-eb7"/>
+                                                <constraint firstAttribute="width" constant="50" id="Ye8-Zd-wNX"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIK-Ri-tFR">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="202" id="Ynf-rL-zoF"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="AIK-Ri-tFR" firstAttribute="bottom" secondItem="4VY-Be-e3W" secondAttribute="bottom" type="default" id="AIq-dw-FZ6"/>
+                                    <constraint firstItem="AIK-Ri-tFR" firstAttribute="top" secondItem="4VY-Be-e3W" secondAttribute="top" type="default" id="XgL-YF-jil"/>
+                                    <constraint firstItem="AIK-Ri-tFR" firstAttribute="leading" secondItem="4VY-Be-e3W" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="jxP-eE-Fny"/>
+                                    <constraint firstItem="AIK-Ri-tFR" firstAttribute="centerY" secondItem="xgB-Nl-Fwt" secondAttribute="centerY" type="default" id="lnI-I5-9Bt"/>
+                                    <constraint firstItem="4VY-Be-e3W" firstAttribute="leading" secondItem="xgB-Nl-Fwt" secondAttribute="leading" constant="20" type="default" id="ost-G1-4s5"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="iconView" destination="4VY-Be-e3W" id="Wqr-K7-IPH"/>
+                                    <outlet property="nameLabel" destination="AIK-Ri-tFR" id="nxX-SF-vek"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="azL-XW-PFD" id="uCB-ay-eaj"/>
+                            <outlet property="delegate" destination="azL-XW-PFD" id="hMZ-ag-pt0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Радиосу" id="Y2k-f5-BaI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nLA-cz-kOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="153"/>
+        </scene>
+        <!--Radios List View Controller-->
+        <scene sceneID="8dy-fO-kPE">
+            <objects>
+                <viewController id="ilx-PK-F7i" customClass="RadiosListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gEd-cF-MgZ">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="67" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="gEg-SG-ozY">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="436" id="TAc-8Y-9PM"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RadioCell" rowHeight="67" id="cU4-5d-v97" customClass="RadioCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="67"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJD-In-pWu">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="QGK-sp-dXi"/>
+                                                        <constraint firstAttribute="width" constant="50" id="UH0-eI-ZGn"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCE-cb-0q8">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="202" id="f5h-cb-rfu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="DJD-In-pWu" firstAttribute="leading" secondItem="cU4-5d-v97" secondAttribute="leading" constant="20" type="default" id="HAl-3f-pOf"/>
+                                            <constraint firstItem="rCE-cb-0q8" firstAttribute="leading" secondItem="DJD-In-pWu" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="fYI-0Q-6Fg"/>
+                                            <constraint firstItem="rCE-cb-0q8" firstAttribute="centerY" secondItem="cU4-5d-v97" secondAttribute="centerY" type="default" id="nDX-ZN-jpl"/>
+                                            <constraint firstItem="rCE-cb-0q8" firstAttribute="top" secondItem="DJD-In-pWu" secondAttribute="top" type="default" id="tCV-tE-Do4"/>
+                                            <constraint firstItem="rCE-cb-0q8" firstAttribute="bottom" secondItem="DJD-In-pWu" secondAttribute="bottom" type="default" id="xdA-WR-D3B"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="iconView" destination="DJD-In-pWu" id="TXN-gt-Wu7"/>
+                                            <outlet property="nameLabel" destination="rCE-cb-0q8" id="TcJ-lV-Cf5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVn-J0-wnq">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="Nij-fb-lyE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTouchPlayButton:" destination="ilx-PK-F7i" eventType="touchUpInside" id="oyn-u4-h6D"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIC-Dj-Ou8">
+                                <items>
+                                    <navigationItem title="Радиосу" id="ati-Qq-37O"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gEg-SG-ozY" firstAttribute="bottom" secondItem="gEd-cF-MgZ" secondAttribute="bottom" type="default" id="5Ej-yp-B5f"/>
+                            <constraint firstItem="xIC-Dj-Ou8" firstAttribute="leading" secondItem="gEd-cF-MgZ" secondAttribute="leading" type="default" id="C46-rY-gMB"/>
+                            <constraint firstItem="xIC-Dj-Ou8" firstAttribute="top" secondItem="gEd-cF-MgZ" secondAttribute="top" type="default" id="Cfy-s2-GpY"/>
+                            <constraint firstItem="xIC-Dj-Ou8" firstAttribute="centerX" secondItem="HVn-J0-wnq" secondAttribute="centerX" type="default" id="Hge-NS-MWj"/>
+                            <constraint firstItem="gEg-SG-ozY" firstAttribute="trailing" secondItem="gEd-cF-MgZ" secondAttribute="trailing" type="default" id="JND-gO-NbI"/>
+                            <constraint firstItem="HVn-J0-wnq" firstAttribute="top" secondItem="gEd-cF-MgZ" secondAttribute="top" constant="56" id="YXC-UI-OOf"/>
+                            <constraint firstItem="gEg-SG-ozY" firstAttribute="leading" secondItem="gEd-cF-MgZ" secondAttribute="leading" type="default" id="ZSa-th-JXD"/>
+                            <constraint firstItem="xIC-Dj-Ou8" firstAttribute="trailing" secondItem="gEd-cF-MgZ" secondAttribute="trailing" type="default" id="uT1-5F-WdY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="HVn-J0-wnq" id="yTZ-yj-frX"/>
+                        <outlet property="tableView" destination="gEg-SG-ozY" id="rKu-gQ-Y9i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V6V-0N-Qpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="-528"/>
+        </scene>
+        <!--Radio Play View Controller-->
+        <scene sceneID="Ld6-mo-mhd">
+            <objects>
+                <viewController id="6DY-8F-UEz" customClass="RadioPlayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7q4-lT-KII">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j25-CN-9j9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qOX-k5-681" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="73"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ELZ-wU-VnC">
+            <objects>
+                <navigationController id="IgE-y6-ckZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9sB-yb-Axc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="azL-XW-PFD" kind="relationship" relationship="rootViewController" id="Jby-Kn-YXW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0D-TN-GOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228" y="113"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="RadioCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RadioCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="iconView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="RadiosListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RadiosListViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="didTouchPlayButton:"/>
+                <relationship kind="outlet" name="bar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="playButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

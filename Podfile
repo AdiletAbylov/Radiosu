@@ -1,0 +1,7 @@
+platform:ios, '6.0'
+pod 'AFNetworking'
+#pod 'FMDB'
+#pod 'NSXtensions'
+#pod 'TapkuLibrary'
+#pod 'MLPAutoCompleteTextField', '~> 1.0'
+#pod 'ReactiveCocoa'
