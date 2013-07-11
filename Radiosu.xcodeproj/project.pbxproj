@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		606DF9E4178EEDE2009D3E81 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 606DF9E3178EEDE2009D3E81 /* MainStoryboard.storyboard */; };
-		606DF9E6178F01C4009D3E81 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606DF9E5178F01C4009D3E81 /* MediaPlayer.framework */; };
 		606DF9E8178F0982009D3E81 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606DF9E7178F0982009D3E81 /* AVFoundation.framework */; };
+		606DF9EA178F1062009D3E81 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606DF9E9178F1062009D3E81 /* AudioToolbox.framework */; };
 		6F377808C99742B0A595867F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B226CE7ED7B41E99DF2BFD7 /* libPods.a */; };
 		71F0F14A99BF110007F84C0B /* Radio.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F0F54392AEBAB46C58AFC2 /* Radio.m */; };
 		71F0F18AD9CB5E108162F244 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71F0FD21ED2C739B2EB01E2C /* Default-568h@2x.png */; };
@@ -45,6 +45,7 @@
 		606DF9E3178EEDE2009D3E81 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		606DF9E5178F01C4009D3E81 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		606DF9E7178F0982009D3E81 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		606DF9E9178F1062009D3E81 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6B226CE7ED7B41E99DF2BFD7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F0F047B127093E506B592F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		71F0F08D0E911F75F1CCB40F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -78,8 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				606DF9EA178F1062009D3E81 /* AudioToolbox.framework in Frameworks */,
 				606DF9E8178F0982009D3E81 /* AVFoundation.framework in Frameworks */,
-				606DF9E6178F01C4009D3E81 /* MediaPlayer.framework in Frameworks */,
 				71F0F40AFFD065DC33643516 /* UIKit.framework in Frameworks */,
 				71F0FBED0B6036801A3EEB78 /* Foundation.framework in Frameworks */,
 				71F0FB91733578B698576EF8 /* CoreGraphics.framework in Frameworks */,
@@ -120,6 +121,7 @@
 		71F0F134671E6BA9286BACC9 = {
 			isa = PBXGroup;
 			children = (
+				606DF9E9178F1062009D3E81 /* AudioToolbox.framework */,
 				606DF9E7178F0982009D3E81 /* AVFoundation.framework */,
 				606DF9E5178F01C4009D3E81 /* MediaPlayer.framework */,
 				71F0F73D1281CB8209236467 /* Products */,

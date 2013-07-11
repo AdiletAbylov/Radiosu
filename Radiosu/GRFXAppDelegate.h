@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
-@interface GRFXAppDelegate : UIResponder <UIApplicationDelegate>
+
+@interface GRFXAppDelegate : UIResponder <UIApplicationDelegate, AVAudioSessionDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
