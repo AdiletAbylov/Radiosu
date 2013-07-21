@@ -20,6 +20,7 @@
 
 + (id)radioFromJSON:(id)json
 {
+    return nil;
 }
 
 @end

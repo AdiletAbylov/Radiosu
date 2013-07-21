@@ -15,7 +15,7 @@
 {
     AVPlayer *_player;
     NSArray *_radios;
-    NSInteger *_selectedRadioIndex;
+    NSInteger _selectedRadioIndex;
 }
 
 @synthesize tableView = _tableView;
@@ -63,7 +63,6 @@
     if(_selectedRadioIndex != indexPath.row)
     {
         Radio *radio = [_radios objectAtIndex:indexPath.row];
-
         [self playRadioURL:[[NSURL alloc] initWithString:radio.serviceURL]];
         [self togglePlayButton];
         _playButton.enabled = YES;
