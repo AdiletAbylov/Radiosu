@@ -20,7 +20,12 @@
 
 + (id)radioFromJSON:(id)json
 {
-    return nil;
+    Radio *radio = [Radio new];
+    radio.name = [json objectForKey:@"title"];
+    radio.serviceURL = [json objectForKey:@"url"];
+    radio.imageURL = [json objectForKey:@"picUrl"];
+    
+    return radio;
 }
 
 @end

@@ -10,11 +10,12 @@
 #import "RadioCell.h"
 #import "Radio.h"
 #import "AVFoundation/AVPlayer.h"
+#import "JSONKit.h"
 
 @implementation RadiosListViewController
 {
     AVPlayer *_player;
-    NSArray *_radios;
+    NSMutableArray *_radios;
     NSInteger _selectedRadioIndex;
 }
 
@@ -35,11 +36,19 @@
 
 - (void)initRadios
 {
-    Radio *obondoru = [Radio new];
-    obondoru.name = @"Кыргызстан обондору";
-    obondoru.serviceURL = @"http://web.europa.kg:8000/obondoru128";
-    obondoru.imageURL = @"http://t.im9.eu/dear-god-meme-face.jpg";
-    _radios = [NSArray arrayWithObject:obondoru];
+    _radios = [[NSMutableArray alloc] init];
+    
+    NSString *jsonUrlString = @"https://dl.dropbox.com/sh/x2d7k9tvtywliio/DXTd4VjaMd/settings.strings";
+    NSData *jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:jsonUrlString]];    
+    NSString *jsonContent = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];    
+    NSDictionary *rootJson = [jsonContent objectFromJSONString];    
+    NSLog(@"%@", [rootJson objectForKey:@"radiolist"]);
+    
+    for(NSDictionary *item in [rootJson objectForKey:@"radiolist"])
+    {
+        NSLog(@"%@", [item objectForKey:@"title"]);
+        [_radios addObject:[Radio radioFromJSON:item]];
+    }    
 }
 
 
