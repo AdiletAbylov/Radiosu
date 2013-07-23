@@ -8,6 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol HttpDataLoader <NSObject>
+
+-(void)dataLoadComplete: (NSString*)jsonString;
+
+@end
+
+
 @interface JSONSettingsLoader : NSObject
+
+-(void)start;
+@property (strong) id<HttpDataLoader> delegate;
 
 @end

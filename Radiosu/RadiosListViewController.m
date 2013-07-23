@@ -10,12 +10,13 @@
 #import "RadioCell.h"
 #import "Radio.h"
 #import "AVFoundation/AVPlayer.h"
-#import "JSONKit.h"
+#import "JSONSettingsLoader.h"
+#import "JSONSettingsParser.h"
 
 @implementation RadiosListViewController
 {
     AVPlayer *_player;
-    NSMutableArray *_radios;
+    NSArray *_radios;
     NSInteger _selectedRadioIndex;
 }
 
@@ -33,24 +34,18 @@
     [super viewDidLoad];
 }
 
-
 - (void)initRadios
 {
-    _radios = [[NSMutableArray alloc] init];
-    
-    NSString *jsonUrlString = @"https://dl.dropbox.com/sh/x2d7k9tvtywliio/DXTd4VjaMd/settings.strings";
-    NSData *jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:jsonUrlString]];    
-    NSString *jsonContent = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];    
-    NSDictionary *rootJson = [jsonContent objectFromJSONString];    
-    NSLog(@"%@", [rootJson objectForKey:@"radiolist"]);
-    
-    for(NSDictionary *item in [rootJson objectForKey:@"radiolist"])
-    {
-        NSLog(@"%@", [item objectForKey:@"title"]);
-        [_radios addObject:[Radio radioFromJSON:item]];
-    }    
+    JSONSettingsLoader *loader = [[JSONSettingsLoader alloc] init];
+    loader.delegate = self;
+    [loader start];
 }
 
+-(void)dataLoadComplete:(NSString*)jsonString{
+    JSONSettingsParser *parser = [[JSONSettingsParser alloc] init];
+    _radios = [parser parseJSON:jsonString];
+    [_tableView reloadData];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

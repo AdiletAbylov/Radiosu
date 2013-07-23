@@ -7,9 +7,9 @@
 
 
 #import <Foundation/Foundation.h>
+#import "JSONSettingsLoader.h"
 
-
-@interface RadiosListViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface RadiosListViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, HttpDataLoader>
 @property IBOutlet UITableView *tableView;
 @property IBOutlet UIButton *playButton;
 @property IBOutlet UINavigationBar *bar;

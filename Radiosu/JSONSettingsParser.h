@@ -10,4 +10,6 @@
 
 @interface JSONSettingsParser : NSObject
 
+-(NSArray*)parseJSON:(NSString*)jsonString;
+
 @end

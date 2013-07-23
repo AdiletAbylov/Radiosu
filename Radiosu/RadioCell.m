@@ -19,7 +19,7 @@
 
 - (void)fillWithRadio:(Radio *)radio
 {
-    _nameLabel.text = radio.name;
+    _nameLabel.text = radio.title;
     [_iconView setImageWithURL:[[NSURL alloc] initWithString:radio.imageURL]];
 }
 @end

@@ -10,7 +10,7 @@
 
 
 @interface Radio : NSObject
-@property NSString *name;
+@property NSString *title;
 @property NSString *imageURL;
 @property NSString *serviceURL;
 

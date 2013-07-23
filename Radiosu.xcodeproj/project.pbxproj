@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2705AF72179E3A6B008D4D7A /* JSONSettingsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2705AF71179E3A6B008D4D7A /* JSONSettingsLoader.m */; };
+		279F6535179EA0300073C85E /* JSONSettingsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 279F6534179EA0300073C85E /* JSONSettingsParser.m */; };
+		279F6538179EA3760073C85E /* JSONParser_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 279F6537179EA3760073C85E /* JSONParser_Tests.m */; };
+		5761D9C429CF4A5899DCEAB4 /* libPods-RadiosuTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B913F43D87B4A4C93A3BA17 /* libPods-RadiosuTests.a */; };
 		606DF9E4178EEDE2009D3E81 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 606DF9E3178EEDE2009D3E81 /* MainStoryboard.storyboard */; };
 		606DF9E8178F0982009D3E81 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606DF9E7178F0982009D3E81 /* AVFoundation.framework */; };
 		606DF9EA178F1062009D3E81 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606DF9E9178F1062009D3E81 /* AudioToolbox.framework */; };
@@ -41,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2705AF70179E3A6B008D4D7A /* JSONSettingsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONSettingsLoader.h; sourceTree = "<group>"; };
+		2705AF71179E3A6B008D4D7A /* JSONSettingsLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONSettingsLoader.m; sourceTree = "<group>"; };
+		279F6533179EA0300073C85E /* JSONSettingsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONSettingsParser.h; sourceTree = "<group>"; };
+		279F6534179EA0300073C85E /* JSONSettingsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONSettingsParser.m; sourceTree = "<group>"; };
+		279F6536179EA3760073C85E /* JSONParser_Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser_Tests.h; sourceTree = "<group>"; };
+		279F6537179EA3760073C85E /* JSONParser_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParser_Tests.m; sourceTree = "<group>"; };
 		2F5B936383CC4251827E13D8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		606DF9E3178EEDE2009D3E81 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		606DF9E5178F01C4009D3E81 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -72,6 +82,8 @@
 		71F0FF0081870705AB7B81C0 /* RadiosListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadiosListViewController.h; sourceTree = "<group>"; };
 		71F0FFF9FAF03574D19349E2 /* Radiosu-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "Radiosu-Info.plist"; sourceTree = "<group>"; };
 		71F0FFFDC30E0B81C43DCBC1 /* GRFXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GRFXAppDelegate.m; sourceTree = "<group>"; };
+		9B913F43D87B4A4C93A3BA17 /* libPods-RadiosuTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RadiosuTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA6534B91DC64DB18D101F5C /* Pods-RadiosuTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadiosuTests.xcconfig"; path = "Pods/Pods-RadiosuTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +107,7 @@
 				71F0F57CBE632B17B595BFDB /* SenTestingKit.framework in Frameworks */,
 				71F0FC944273D0420C920232 /* UIKit.framework in Frameworks */,
 				71F0FCD2AD1EAFBDCA4D7D9F /* Foundation.framework in Frameworks */,
+				5761D9C429CF4A5899DCEAB4 /* libPods-RadiosuTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +127,10 @@
 				71F0FCB29AF5B4DDAE59E50C /* RadioCell.h */,
 				71F0F54392AEBAB46C58AFC2 /* Radio.m */,
 				71F0F78571ACECE4CD068923 /* Radio.h */,
+				2705AF70179E3A6B008D4D7A /* JSONSettingsLoader.h */,
+				2705AF71179E3A6B008D4D7A /* JSONSettingsLoader.m */,
+				279F6533179EA0300073C85E /* JSONSettingsParser.h */,
+				279F6534179EA0300073C85E /* JSONSettingsParser.m */,
 			);
 			path = Radiosu;
 			sourceTree = "<group>";
@@ -129,6 +146,7 @@
 				71F0F02808B7375251E27ACE /* Radiosu */,
 				71F0F7A42B82831168F46FA9 /* RadiosuTests */,
 				2F5B936383CC4251827E13D8 /* Pods.xcconfig */,
+				CA6534B91DC64DB18D101F5C /* Pods-RadiosuTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +190,7 @@
 				71F0F23FCAD01FFE8144CC72 /* CoreGraphics.framework */,
 				71F0F0EB6B5EFA01C71E864C /* SenTestingKit.framework */,
 				6B226CE7ED7B41E99DF2BFD7 /* libPods.a */,
+				9B913F43D87B4A4C93A3BA17 /* libPods-RadiosuTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -182,6 +201,8 @@
 				71F0F62B3A0D0DA9070ECD8D /* Supporting Files */,
 				71F0F6E6905B61D09D97797E /* RadiosuTests.h */,
 				71F0FC773146FC050737A367 /* RadiosuTests.m */,
+				279F6536179EA3760073C85E /* JSONParser_Tests.h */,
+				279F6537179EA3760073C85E /* JSONParser_Tests.m */,
 			);
 			path = RadiosuTests;
 			sourceTree = "<group>";
@@ -212,10 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71F0F63EB46191A5E4E18EE0 /* Build configuration list for PBXNativeTarget "RadiosuTests" */;
 			buildPhases = (
+				5F448F42D1F5453C87F271D4 /* Check Pods Manifest.lock */,
 				71F0FAE0D5BDD7C8AB1D957C /* Sources */,
 				71F0F4D8B734FF0ED181A2F5 /* Frameworks */,
 				71F0F7FC4C62D1FA5AA3C075 /* Resources */,
 				71F0F4EAE8FC282095CF8247 /* ShellScript */,
+				71AC0FBF5C4B438F994ADAF4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -277,6 +300,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5F448F42D1F5453C87F271D4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		71AC0FBF5C4B438F994ADAF4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-RadiosuTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		71F0F4EAE8FC282095CF8247 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -330,6 +383,8 @@
 				71F0F9542D89F590D3B4ABFA /* RadiosListViewController.m in Sources */,
 				71F0F6855E45C03D852F4F6C /* RadioCell.m in Sources */,
 				71F0F14A99BF110007F84C0B /* Radio.m in Sources */,
+				2705AF72179E3A6B008D4D7A /* JSONSettingsLoader.m in Sources */,
+				279F6535179EA0300073C85E /* JSONSettingsParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71F0FD6FC47F739C88283162 /* RadiosuTests.m in Sources */,
+				279F6538179EA3760073C85E /* JSONParser_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +473,7 @@
 		};
 		71F0F8D63E9837017F36F581 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F5B936383CC4251827E13D8 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Radiosu.app/Radiosu";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -434,6 +491,7 @@
 		};
 		71F0F995AE080A8231680FB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA6534B91DC64DB18D101F5C /* Pods-RadiosuTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Radiosu.app/Radiosu";
 				FRAMEWORK_SEARCH_PATHS = (
