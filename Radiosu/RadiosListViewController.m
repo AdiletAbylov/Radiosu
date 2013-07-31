@@ -11,6 +11,7 @@
 #import "Radio.h"
 #import "AVFoundation/AVPlayer.h"
 #import "JSONSettingsParser.h"
+#import "MBProgressHUD.h"
 
 @implementation RadiosListViewController
 {
@@ -38,6 +39,7 @@
 {
     JSONSettingsLoader *loader = [[JSONSettingsLoader alloc] init];
     loader.delegate = self;
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [loader start];
 }
 
@@ -45,6 +47,7 @@
 {
     JSONSettingsParser *parser = [[JSONSettingsParser alloc] init];
     _radios = [parser parseJSON:jsonString];
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
     [_tableView reloadData];
 }
 
