@@ -11,7 +11,7 @@
 @protocol HttpDataLoader <NSObject>
 
 -(void)dataLoadComplete: (NSString*)jsonString;
-
+-(void)dataLoadError:(NSError *)error;
 @end
 
 

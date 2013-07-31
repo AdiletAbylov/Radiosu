@@ -12,6 +12,7 @@
 #import "AVFoundation/AVPlayer.h"
 #import "JSONSettingsParser.h"
 #import "MBProgressHUD.h"
+#import "GRFXHUDUtil.h"
 
 @implementation RadiosListViewController
 {
@@ -39,7 +40,7 @@
 {
     JSONSettingsLoader *loader = [[JSONSettingsLoader alloc] init];
     loader.delegate = self;
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [[GRFXHUDUtil sharedInstance] displayLoadingHUDForView:self.view withTitle:nil];
     [loader start];
 }
 
@@ -47,8 +48,16 @@
 {
     JSONSettingsParser *parser = [[JSONSettingsParser alloc] init];
     _radios = [parser parseJSON:jsonString];
-    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+    [[GRFXHUDUtil sharedInstance] hideHUDForView:self.view];
+
     [_tableView reloadData];
+}
+
+- (void)dataLoadError:(NSError *)error
+{
+    [[GRFXHUDUtil sharedInstance] hideHUDForView:self.view];
+    [[GRFXHUDUtil sharedInstance] displayErrorHUDForView:self.view withTitle:@"Ошибка сервиса"];
+    [[GRFXHUDUtil sharedInstance] hideHUDForView:self.view afterDelay:2];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

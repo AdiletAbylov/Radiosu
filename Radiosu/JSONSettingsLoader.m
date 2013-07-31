@@ -23,6 +23,7 @@ NSString* const settingsUrl = @"https://dl.dropbox.com/sh/x2d7k9tvtywliio/DXTd4V
         failure:^(AFHTTPRequestOperation *operation, NSError *error)
         {
             NSLog(@"%@", error.description);
+            [delegate dataLoadError:error];
         }
      ];
     

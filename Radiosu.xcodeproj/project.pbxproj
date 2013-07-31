@@ -14,6 +14,11 @@
 		606DF9E4178EEDE2009D3E81 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 606DF9E3178EEDE2009D3E81 /* MainStoryboard.storyboard */; };
 		606DF9E8178F0982009D3E81 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606DF9E7178F0982009D3E81 /* AVFoundation.framework */; };
 		606DF9EA178F1062009D3E81 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606DF9E9178F1062009D3E81 /* AudioToolbox.framework */; };
+		60B1885A17A8DF0F00B390FA /* GRFXHUDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B1885917A8DF0F00B390FA /* GRFXHUDUtil.m */; };
+		60B1885D17A8E00700B390FA /* failedIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B1885B17A8E00700B390FA /* failedIcon.png */; };
+		60B1885E17A8E00700B390FA /* failedIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B1885C17A8E00700B390FA /* failedIcon@2x.png */; };
+		60B1886117A8E01600B390FA /* SuccessCheckmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B1885F17A8E01600B390FA /* SuccessCheckmark.png */; };
+		60B1886217A8E01600B390FA /* SuccessCheckmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B1886017A8E01600B390FA /* SuccessCheckmark@2x.png */; };
 		6F377808C99742B0A595867F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B226CE7ED7B41E99DF2BFD7 /* libPods.a */; };
 		71F0F14A99BF110007F84C0B /* Radio.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F0F54392AEBAB46C58AFC2 /* Radio.m */; };
 		71F0F18AD9CB5E108162F244 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71F0FD21ED2C739B2EB01E2C /* Default-568h@2x.png */; };
@@ -56,6 +61,12 @@
 		606DF9E5178F01C4009D3E81 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		606DF9E7178F0982009D3E81 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		606DF9E9178F1062009D3E81 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		60B1885817A8DF0F00B390FA /* GRFXHUDUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRFXHUDUtil.h; sourceTree = "<group>"; };
+		60B1885917A8DF0F00B390FA /* GRFXHUDUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRFXHUDUtil.m; sourceTree = "<group>"; };
+		60B1885B17A8E00700B390FA /* failedIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = failedIcon.png; sourceTree = "<group>"; };
+		60B1885C17A8E00700B390FA /* failedIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "failedIcon@2x.png"; sourceTree = "<group>"; };
+		60B1885F17A8E01600B390FA /* SuccessCheckmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SuccessCheckmark.png; sourceTree = "<group>"; };
+		60B1886017A8E01600B390FA /* SuccessCheckmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SuccessCheckmark@2x.png"; sourceTree = "<group>"; };
 		6B226CE7ED7B41E99DF2BFD7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F0F047B127093E506B592F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		71F0F08D0E911F75F1CCB40F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -114,9 +125,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60B1886317A8E01B00B390FA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				60B1886017A8E01600B390FA /* SuccessCheckmark@2x.png */,
+				60B1885B17A8E00700B390FA /* failedIcon.png */,
+				60B1885C17A8E00700B390FA /* failedIcon@2x.png */,
+				60B1885F17A8E01600B390FA /* SuccessCheckmark.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		71F0F02808B7375251E27ACE /* Radiosu */ = {
 			isa = PBXGroup;
 			children = (
+				60B1886317A8E01B00B390FA /* Assets */,
+				60B1885817A8DF0F00B390FA /* GRFXHUDUtil.h */,
+				60B1885917A8DF0F00B390FA /* GRFXHUDUtil.m */,
 				71F0F27DF45EBDD5C7970B60 /* Supporting Files */,
 				71F0FA8553A9CFD2F46EE029 /* GRFXAppDelegate.h */,
 				71F0FFFDC30E0B81C43DCBC1 /* GRFXAppDelegate.m */,
@@ -286,6 +311,10 @@
 				71F0F3975F3E63F7C0A4EC61 /* Default@2x.png in Resources */,
 				71F0F18AD9CB5E108162F244 /* Default-568h@2x.png in Resources */,
 				606DF9E4178EEDE2009D3E81 /* MainStoryboard.storyboard in Resources */,
+				60B1885D17A8E00700B390FA /* failedIcon.png in Resources */,
+				60B1885E17A8E00700B390FA /* failedIcon@2x.png in Resources */,
+				60B1886117A8E01600B390FA /* SuccessCheckmark.png in Resources */,
+				60B1886217A8E01600B390FA /* SuccessCheckmark@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +414,7 @@
 				71F0F14A99BF110007F84C0B /* Radio.m in Sources */,
 				2705AF72179E3A6B008D4D7A /* JSONSettingsLoader.m in Sources */,
 				279F6535179EA0300073C85E /* JSONSettingsParser.m in Sources */,
+				60B1885A17A8DF0F00B390FA /* GRFXHUDUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
