@@ -18,6 +18,6 @@
 @interface JSONSettingsLoader : NSObject
 
 -(void)start;
-@property (strong) id<HttpDataLoader> delegate;
+@property (weak) id<HttpDataLoader> delegate;
 
 @end
