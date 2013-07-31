@@ -10,7 +10,6 @@
 #import "RadioCell.h"
 #import "Radio.h"
 #import "AVFoundation/AVPlayer.h"
-#import "JSONSettingsLoader.h"
 #import "JSONSettingsParser.h"
 
 @implementation RadiosListViewController
@@ -23,6 +22,7 @@
 @synthesize tableView = _tableView;
 @synthesize playButton = _playButton;
 @synthesize bar = _bar;
+@synthesize titleLabel = _titleLabel;
 
 - (void)viewDidLoad
 {
@@ -41,7 +41,8 @@
     [loader start];
 }
 
--(void)dataLoadComplete:(NSString*)jsonString{
+- (void)dataLoadComplete:(NSString *)jsonString
+{
     JSONSettingsParser *parser = [[JSONSettingsParser alloc] init];
     _radios = [parser parseJSON:jsonString];
     [_tableView reloadData];
@@ -64,41 +65,47 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    if(_selectedRadioIndex != indexPath.row)
+    if (_selectedRadioIndex != indexPath.row)
     {
         Radio *radio = [_radios objectAtIndex:indexPath.row];
         [self playRadioURL:[[NSURL alloc] initWithString:radio.serviceURL]];
         [self togglePlayButton];
         _playButton.enabled = YES;
         _selectedRadioIndex = indexPath.row;
+        [self updateTopBarTitle];
     }
 }
 
--(void)playRadioURL:(NSURL *)url
+- (void)playRadioURL:(NSURL *)url
 {
     _player = [AVPlayer playerWithURL:url];
     [_player play];
 }
 
--(void)togglePlayButton
+- (void)togglePlayButton
 {
     [_playButton setTitle:[self titleForButton] forState:UIControlStateNormal];
 }
 
--(NSString *)titleForButton
+- (NSString *)titleForButton
 {
     return [self isPlaying] ? @"Pause" : @"Play";
 }
 
--(BOOL)isPlaying
+- (BOOL)isPlaying
 {
     return _player.rate == 1.0;
 }
 
+- (void)updateTopBarTitle
+{
+    Radio *radio = [_radios objectAtIndex:_selectedRadioIndex];
+    _titleLabel.text = radio.title;
+}
 
 - (IBAction)didTouchPlayButton:(id)sender
 {
-    if([self isPlaying])
+    if ([self isPlaying])
     {
         [_player pause];
     } else
