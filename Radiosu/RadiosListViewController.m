@@ -6,13 +6,46 @@
 //
 
 
+#import <AVFoundation/AVFoundation.h>
 #import "RadiosListViewController.h"
 #import "RadioCell.h"
 #import "Radio.h"
 #import "AVFoundation/AVPlayer.h"
 #import "JSONSettingsParser.h"
-#import "MBProgressHUD.h"
 #import "GRFXHUDUtil.h"
+
+
+#pragma mark Audio session callbacks_______________________
+void audioRouteChangeListenerCallback(void *inUserData, AudioSessionPropertyID inPropertyID, UInt32 inPropertyValueSize, const void *inPropertyValue)
+{
+    // ensure that this callback was invoked for a route change
+    if (inPropertyID != kAudioSessionProperty_AudioRouteChange) return;
+
+    RadiosListViewController *controller = (__bridge RadiosListViewController *) inUserData;
+    CFDictionaryRef routeChangeDictionary = inPropertyValue;
+    CFNumberRef routeChangeReasonRef = CFDictionaryGetValue(routeChangeDictionary, CFSTR (kAudioSession_AudioRouteChangeKey_Reason));
+
+    SInt32 routeChangeReason;
+
+    CFNumberGetValue(routeChangeReasonRef, kCFNumberSInt32Type, &routeChangeReason);
+
+    CFStringRef oldRouteRef = CFDictionaryGetValue(routeChangeDictionary, CFSTR (kAudioSession_AudioRouteChangeKey_OldRoute));
+
+    NSString *oldRouteString = (__bridge NSString *) oldRouteRef;
+    if (routeChangeReason == kAudioSessionRouteChangeReason_NewDeviceAvailable)
+    {
+        //do nothing
+    }
+
+    if (routeChangeReason == kAudioSessionRouteChangeReason_OldDeviceUnavailable)
+    {
+
+        if ([controller isPlaying] && ([oldRouteString isEqualToString:@"Headphone"] || [oldRouteString isEqualToString:@"LineOut"]))
+        {
+            [controller pause];
+        }
+    }
+}
 
 @implementation RadiosListViewController
 {
@@ -34,6 +67,7 @@
     _playButton.enabled = NO;
     _selectedRadioIndex = -1;
     [super viewDidLoad];
+    AudioSessionAddPropertyListener(kAudioSessionProperty_AudioRouteChange, audioRouteChangeListenerCallback, (__bridge  void*)self);
 }
 
 - (void)initRadios
@@ -117,14 +151,18 @@
 
 - (IBAction)didTouchPlayButton:(id)sender
 {
-    if ([self isPlaying])
-    {
-        [_player pause];
-    } else
-    {
-        [_player play];
-    }
+    [self isPlaying] ? [self pause] : [self play];
+}
+
+- (void)play
+{
+    [_player play];
     [self togglePlayButton];
 }
 
+- (void)pause
+{
+    [_player pause];
+    [self togglePlayButton];
+}
 @end
